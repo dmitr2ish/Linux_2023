@@ -59,6 +59,13 @@ echo "import requests
 response = requests.get('https://urfu.ru/ru')
 print(response.headers)" | sudo tee $main_script_name
 
+# set permissions for access to file
+sudo chown John:project_john $john_script_name
+sudo chmod 2770 $john_script_name
+
+sudo chown :project_main $main_script_name
+sudo chmod 2770 $main_script_name
+
 # checking
 checking_prepared_work_space() {
    echo "$1 login and start his script"
