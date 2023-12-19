@@ -30,10 +30,10 @@ sudo mkdir $project_john_dir $project_main_dir
 
 # set permissions for access to dirs
 sudo chown John:project_john $project_john_dir
-sudo chmod 2775 $project_john_dir
+sudo chmod 2770 $project_john_dir
 
 sudo chown :project_main $project_main_dir
-sudo chmod 2775 $project_main_dir
+sudo chmod 2770 $project_main_dir
 
 # set virtual env in project dir
 sudo -u John python3 -m venv $project_john_dir/venv
